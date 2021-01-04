@@ -1,4 +1,5 @@
 ## 原作者：liukun321 咕唧咕唧
+
 版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。
 本文链接：https://blog.csdn.net/liukun321/article/details/8558425
 这里只是搬运方便记录更新
@@ -23,8 +24,9 @@ sudo dd iflag=dsync oflag=dsync if=tiny210-uboot.bin of=/dev/sdb seek=1
 ## 2.nand启动
 通过SD卡启动的u-boot for tiny210 将u-boot镜像写入nandflash
 开发板终端下执行下面的命令
+```shell
 [FriendlyLEG-TINY210]# tftp 21000000 tiny210-uboot.bin
 [FriendlyLEG-TINY210]# nand erase.chip
 [FriendlyLEG-TINY210]# nand write 21000000 0 3c1f4 
-
+```
 
